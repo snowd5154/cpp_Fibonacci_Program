@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int fibonacci(int index);
+int main()
+{
+int n, fnum = 1, snum = 1, tot = 0;
+
+// getting the Number entered by the user
+cout << "Enter the Number : ";
+cin >> n;
+
+// Displaying the fibonacci Series for the number
+cout << "\nThe Fibonocci Numbers for the index " << n << " are :" << endl;
+
+long f[n + 1];
+f[0] = 1;
+
+f[1] = 1;
+
+cout << f[0] << " " << f[1] << " ";
+  
+// This loop will continuously display the fibonacci value
+for (int k = 2; k <= n; k++)
+{
+f[k] = f[k - 1] + f[k - 2];
+cout << f[k] << " ";
+}
+
+
+return 0;
+}
